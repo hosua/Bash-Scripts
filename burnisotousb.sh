@@ -15,6 +15,7 @@ for file in *; do
 		files+=("$file") # Append to a list
 	fi
 done
+echo "Note: You will need to put this script in the same directory as your ISO files in order for the script to detect them."
 read -p "Which ISO do you wish to use? " selection
 isofile="${files[$selection-1]}"
 echo "Selected ISO: $isofile"
