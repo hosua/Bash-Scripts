@@ -23,7 +23,9 @@ read -p "Are you sure you want to burn '$isofile' to '$drive'? [Y/n] " yesno
 if [[ $yesno == Y || $yesno == y || $yesno == "" ]]; then
 	echo "Burning $isofile to drive: $drive"
 	sudo dd if=$isofile of=$drive status=progress
+	echo "'$isofile' was successfully burned to '$drive'."
+else
+	echo "User did not select yes, cancelling the task..."
 fi
-echo "'$isofile' was successfully burned to '$drive'."
 
 
