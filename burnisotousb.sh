@@ -16,10 +16,10 @@ for file in *; do
 	fi
 done
 echo "Note: You will need to put this script in the same directory as your ISO files in order for the script to detect them."
-read -p "Which ISO do you wish to use? " selection
+read -p "Which ISO do you wish to use? (Enter the number to select an option)" selection
 isofile="${files[$selection-1]}"
 echo "Selected ISO: $isofile"
-read -p "Are you sure you want to burn '$isofile' to '$drive'? [Y/n] " yesno
+read -p "Are you sure you want to burn '$isofile' to '$drive'? All files on the selected drive will be overwritten! [Y/n] " yesno
 
 if [[ $yesno == Y || $yesno == y || $yesno == "" ]]; then
 	echo "Burning $isofile to drive: $drive"
